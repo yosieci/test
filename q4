@@ -1,0 +1,18 @@
+//第四題 輸入一個數值，並判斷輸入的值是否可以被2、5或7整除
+import java.io.Console;
+public class q4{  //程式進入點
+  public static void main(String args[])
+	{
+	   Console in=System.console();   /*透過命名為in的物件讀取鍵盤的輸入，
+					  讓JAVA與鍵盤建立連線*/
+	  int A;
+	  System.out.println("輸入一個整數");
+	  A = Integer.parseInt(in.readLine());
+ 	  //可以用獨立的if做
+	  if((A%2)==0){System.out.println(A+"可被2整除");}  //A mod 2: A除以2取餘數，若餘數為0代表A可被2整除
+	  if((A%5)==0){System.out.println(A+"可被5整除");}
+	  if((A%7)==0){System.out.println(A+"可被7整除");}   
+	  if(((A%2)!=0)&&((A%5)!=0)&&((A%2)!=0)){System.out.println(A+"不可被2整除，也不可被5整除，也不可被7整除");}   
+
+	}
+}
